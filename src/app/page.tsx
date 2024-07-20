@@ -3,8 +3,9 @@
 import React from 'react';
 import Typewriter from '../components/typewriter';
 import Link from 'next/link';
+import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faTwitter, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Home: React.FC = () => {
   return (
@@ -13,7 +14,7 @@ const Home: React.FC = () => {
         <header className="border-b-2 border-gray-400 mb-6 pb-4"> {/* Adjusted margin and padding for spacing */}
           <div className="header-line">
             <span className="line"></span>
-            <span className="title">Ali's Page</span>
+            <span className="title">Ali&apos;s Page</span> {/* Escaped single quote */}
             <span className="line"></span>
           </div>
           <div className="flex justify-center space-x-4 mt-4">
@@ -35,22 +36,22 @@ const Home: React.FC = () => {
             </div>
             <p className="text-gray-300 text-left mt-4"> {/* Added margin-top for better spacing */}
               Hi there, <br />
-              I'm Ali, a CS undergrad @ University of Waterloo. <br />
+              I&apos;m Ali, a CS undergrad @ University of Waterloo. <br /> {/* Escaped single quote */}
               I like to build iOS apps in my free time, and ship products.<br />
               <br />
               Feel free to hit me up on X 😄
             </p>
           </div>
           <div className="flex-shrink-0 text-center">
-            <img src="/pfp.png" alt="Profile Picture" className="w-40 h-40 mx-auto mt-4" /> {/* Added margin-top for better spacing */}
+            <Image src="/pfp.png" alt="Profile Picture" width={160} height={160} className="mx-auto mt-4" /> {/* Added margin-top for better spacing */}
             <div className="social-icons mt-4">
               <a href="https://github.com/alboainin" target="_blank" rel="noopener noreferrer" className="social-icon">
                 <FontAwesomeIcon icon={faGithub} size="2x" />
               </a>
-              <a href="https://twitter.com/alboainin" target="_blank" rel="noopener noreferrer" className="social-icon">
-                <FontAwesomeIcon icon={faXTwitter} size="2x" />
+              <a href="www.alboainin.dev" target="_blank" rel="noopener noreferrer" className="social-icon">
+                <FontAwesomeIcon icon={faTwitter} size="2x" /> {/* Corrected the icon */}
               </a>
-              <a href="https://linkedin.com/in/alboainin" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <a href="www.linkedin.com/in/ali-a-11a217283" target="_blank" rel="noopener noreferrer" className="social-icon">
                 <FontAwesomeIcon icon={faLinkedin} size="2x" />
               </a>
             </div>
