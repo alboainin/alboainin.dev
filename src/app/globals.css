@@ -2,32 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* Custom styles for the retro box */
+.retro-box {
+  background-color: #252525; /* Dark background for the box */
+  border: 3px solid rgb(255, 111, 97); /* Bright orange border color in RGB */
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.6); /* Darker shadow effect */
+  font-family: 'Press Start 2P', monospace; /* Updated font family */
+  width: 80%;
+  max-width: 800px;
+  text-align: center;
+  color: #ffffff; /* Light text color for contrast */
+  padding: 2rem; /* Increased padding for more vertical space */
+  min-height: 600px; /* Ensure a minimum height for the box */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* Header line styles */
+.header-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 111, 97); /* Bright orange text color in RGB */
+  position: relative;
+}
+
+.line {
+  flex: 1;
+  height: 4px;
+  background-color: rgb(255, 111, 97); /* Bright orange line color in RGB */
+}
+
+.title {
+  padding: 0 10px;
+  font-size: 18px;
+  background-color: #252525; /* Background color for title */
+  position: absolute;
+  top: -12px;
+}
+
+/* Retro button styles */
+.retro-button {
+  background-color: #333333;
+  border: 2px solid rgb(255, 111, 97); /* Bright orange border color in RGB */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  color: #fffde4;
+  font-family: 'Press Start 2P', monospace; /* Updated font family */
+  padding: 10px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.retro-button:hover {
+  background-color: rgb(255, 111, 97); /* Bright orange background color in RGB */
+  color: #252525;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Profile picture style */
+img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border: 2px solid rgb(255, 111, 97); /* Bright orange border color in RGB */
+  margin: auto; /* Center the image */
+  display: block; /* Ensure the image is a block element */
+}
+
+/* Social icons under profile picture */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-icon {
+  margin: 0 10px;
+  color: rgb(255, 111, 97); /* Bright orange color in RGB */
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #ffffff;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #93aeb5; /* White background for overall page */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}

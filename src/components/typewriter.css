@@ -1,0 +1,44 @@
+.output {
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ff6f61; /* Match the retro text color */
+    padding: 0; /* Remove extra padding */
+    margin: 0; /* Remove extra margin */
+  }
+  
+  h1 {
+    font-size: 20px; /* Decrease the size of the typewriter text */
+    display: inline;
+    padding: 0; /* Remove extra padding */
+    margin: 0; /* Remove extra margin */
+  }
+  
+  /* Cursor Styling */
+  
+  .cursor {
+    display: inline-block;
+    margin-left: 3px;
+    background-color: #ff6f61;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    width: 13px;
+    height: 24px;
+    vertical-align: bottom;
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    49% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
